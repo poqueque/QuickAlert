@@ -113,6 +113,7 @@ class QuickAlertButtons extends StatelessWidget {
       color: isOkayBtn ? Colors.white : Colors.grey,
       fontWeight: FontWeight.w600,
       fontSize: 18.0,
+      fontFamily: options.fontFamily,
     );
 
     if (isOkayBtn) {

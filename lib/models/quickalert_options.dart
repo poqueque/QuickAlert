@@ -81,6 +81,8 @@ class QuickAlertOptions {
   /// timer for dismissing dialog (Ok button)
   Timer? timer;
 
+  String? fontFamily;
+
   /// Alert Options
   QuickAlertOptions({
     /// Title of the dialog
@@ -157,5 +159,8 @@ class QuickAlertOptions {
 
     /// timer for dismissing dialog (Ok button)
     this.timer,
+
+    /// Font family to use in the dialog
+    this.fontFamily,
   });
 }

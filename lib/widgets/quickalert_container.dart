@@ -105,9 +105,11 @@ class QuickAlertContainer extends StatelessWidget {
         textAlign: options.titleAlignment ?? TextAlign.center,
         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                   color: options.titleColor,
+                  fontFamily: options.fontFamily,
                 ) ??
             TextStyle(
               color: options.titleColor,
+              fontFamily: options.fontFamily,
             ),
       ),
     );
@@ -128,6 +130,7 @@ class QuickAlertContainer extends StatelessWidget {
         textAlign: options.textAlignment ?? TextAlign.center,
         style: TextStyle(
           color: options.textColor,
+          fontFamily: options.fontFamily,
         ),
       );
     }

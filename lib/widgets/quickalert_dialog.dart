@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quickalert/models/quickalert_animtype.dart';
@@ -94,6 +95,7 @@ class QuickAlert {
 
     /// Disable Back Button
     bool disableBackBtn = false,
+    String? fontFamily,
   }) {
     Timer? timer;
     if (autoCloseDuration != null) {
@@ -128,6 +130,7 @@ class QuickAlert {
       borderRadius: borderRadius,
       customAsset: customAsset,
       width: width,
+      fontFamily: fontFamily,
     );
 
     Widget child = WillPopScope(
