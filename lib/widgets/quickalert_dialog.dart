@@ -40,10 +40,10 @@ class QuickAlert {
     bool barrierDismissible = true,
 
     /// Triggered when confirm button is tapped
-    VoidCallback? onConfirmBtnTap,
+    void Function(BuildContext)? onConfirmBtnTap,
 
     /// Triggered when cancel button is tapped
-    VoidCallback? onCancelBtnTap,
+    void Function(BuildContext)? onCancelBtnTap,
 
     /// Confirmation button text
     String confirmBtnText = 'Okay',
@@ -140,7 +140,7 @@ class QuickAlert {
             !disableBackBtn &&
             showCancelBtn) {
           if (options.onCancelBtnTap != null) {
-            options.onCancelBtnTap!();
+            options.onCancelBtnTap!.call(context);
             return false;
           }
         }
@@ -166,7 +166,7 @@ class QuickAlert {
               event.logicalKey == LogicalKeyboardKey.enter) {
             options.timer?.cancel();
             options.onConfirmBtnTap != null
-                ? options.onConfirmBtnTap!()
+                ? options.onConfirmBtnTap!.call(context)
                 : Navigator.pop(context);
           }
         },
